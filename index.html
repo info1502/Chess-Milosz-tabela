@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatyczne uruchomienie aplikacji</title>
+ <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+  
+    <iframe src="https://script.google.com/macros/s/AKfycbx0mKW9xce7in0YCnMXqWQq9stfJf65STgkI7XUeJCxgCQ7_YrLf4l9wZfCMXqHZ0k/exec"></iframe>
+<script>
+ function readClipboard() {
+            navigator.clipboard.readText().then(text => {
+                document.getElementById('output').textContent = text;
+            }).catch(err => {
+                console.error('Failed to read clipboard contents: ', err);
+                alert('Failed to read clipboard contents.');
+            });
+        }
+</script>
+</body>
+</html>
